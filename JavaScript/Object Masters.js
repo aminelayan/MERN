@@ -25,29 +25,29 @@ const pokémon = Object.freeze([
 ]);
 
 // an array of pokémon objects where the id is evenly divisible by 3
-const pkmnId3 = pokémon.filter( p => p.id % 3== 0 );
-console.log(pkmnId3);
-// an array of pokémon objects that are "fire" type
-const pkmnFire = pokémon.filter( f => f.types.includes("fire") );
-console.log(pkmnFire);
+const oddNumberID = pokémon.filter( p=> p.id %3==0 );
+console.log(oddNumberID);
+//an array of pokémon objects that are "fire" type
+const firetype = pokémon.filter( p=> p.types.includes("fire"));
+console.log(firetype);
 // an array of pokémon objects that have more than one type
-const pkmnTypes = pokémon.filter( t => t.types.length>1);
-console.log(pkmnTypes);
+const morethanonetype = pokémon.filter( p=> p.types.length>1);
+console.log(morethanonetype);
 // an array with just the names of the pokémon
-const pkmnNames = pokémon.map( p => p.name );
-console.log(pkmnNames);
+const pokemonName = pokémon.map( p=> p.name);
+console.log(pokemonName);
 // an array with just the names of pokémon with an id greater than 99
-const pkmnIDS = pokémon.filter( p => p.id>99 );
-const pkmnName = pkmnIDS.map( n => n.name );
-console.log(pkmnName);
+const idgreaterthan99 = pokémon.filter( p=> p.id>99);
+const pokemonNameid = idgreaterthan99.map( p=> p.name);
+console.log(pokemonNameid);
 // an array with just the names of the pokémon whose only type is poison
-const pkmnPoison = pokémon.filter( v => v.types==="poison" );
-const pkmnPName=pkmnPoison.map(s=>s.name);
-console.log(pkmnPName);
+const poisontype = pokémon.filter(p=> p.types == "poison");
+const poisonname=poisontype.map(s=>s.name);
+console.log(poisonname);
 // an array containing just the first type of all the pokémon whose second type is "flying"
-const typePKMN = pokémon.filter( e => e.types[1] === "flying" );
-const namePKMN=typePKMN.map(t => t.types[0]);
-console.log(namePKMN);
+const flyingtype = pokémon.filter(p=> p.types[1] == "flying");
+const flyingname=flyingtype.map(s=>s.name);
+console.log(flyingname);
 // a count of the number of pokémon that are "normal" type
-const PkmnCount=pokémon.filter(f=>f.types.includes("normal")).length;
-console.log(PkmnCount);
+const noramltype = pokémon.filter(p=> p.types.includes("normal")).length;
+console.log(noramltype)
