@@ -46,7 +46,7 @@ const poisonname=poisontype.map(s=>s.name);
 console.log(poisonname);
 // an array containing just the first type of all the pokémon whose second type is "flying"
 const flyingtype = pokémon.filter(p=> p.types[1] == "flying");
-const flyingname=flyingtype.map(s=>s.name);
+const flyingname=flyingtype.map(s=>s.types[0]);
 console.log(flyingname);
 // a count of the number of pokémon that are "normal" type
 const noramltype = pokémon.filter(p=> p.types.includes("normal")).length;
