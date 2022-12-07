@@ -2,6 +2,7 @@
 import './App.css';
 import PersonInfo from './components/PersonCard';
 
+
 function App() {
 
   var pepole= [
