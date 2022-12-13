@@ -4,7 +4,7 @@ const TabDisplay = (props) => {
   return (
     <div>
 
-        <textarea value={props.tabToShow===""?"":"This is "+props.tabToShow}></textarea>
+        <textarea value={props.tabToShow === ""?"":"This is "+props.tabToShow}></textarea>
     </div>
   )
 }
