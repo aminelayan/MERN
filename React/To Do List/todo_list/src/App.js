@@ -1,23 +1,22 @@
 import { useState } from 'react';
 import './App.css';
-import TaskGenerator from './components/TaskGenerator';
-import TODO from './components/TODO';
+import Display from './components/Display';
+import Form from './components/Form';
+
 
 
 
 function App() {
-const addNewTask =(newTask)=>{
-  setNewTask(prevousTasks=> prevousTasks.concat(newTask));
-  console.log(newTask);
-};
-const del =(newTask)=>{
-  setNewTask(prevousTasks=> prevousTasks.concat(newTask));
-  console.log(newTask);
-};
-  
+const[todos,setTodos]=useState([]);
+
+const todoHandler = (todo) =>{
+setTodos([...todos,todo])
+}
+
   return (
     <div className="App">
-      <TaskGenerator/>
+      <Form todos={todoHandler}/>
+      <Display todos={todos}/>
     </div>
   );
 }
