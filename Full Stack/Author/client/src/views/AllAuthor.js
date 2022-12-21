@@ -17,9 +17,6 @@ const AllAuthor = () => {
   return (
     <div>
             {loaded && <AuthorList author={author}/>}
-
-
-
     </div>
   )
 }

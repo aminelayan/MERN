@@ -13,7 +13,7 @@ const Main = () => {
             setLoaded(true);
         })
         .catch(err => console.log(err))
-    },[author]);
+    },[]);
 
     const createAuthor = author =>{
         axios.post('http://localhost:8000/api/author',author)
@@ -24,6 +24,7 @@ const Main = () => {
   return (
     <div>
     <AuthorForm onSubmitProp={createAuthor} initialName=""/>
+    {loaded && <AuthorList author={author}/>}
     </div>
   )
 }
