@@ -8,7 +8,7 @@ class Ninja{
      sayName(){
         console.log("name :"+this.ninjaName);
         console.log("--------------------------------------")
-     }
+}
      showStats(){
         console.log("name: ",this.ninjaName,"\n", "Strength: ",this.strength,"\n","speed: ",this.speed,"\n","health: ",this.health)
          console.log("--------------------------------------")

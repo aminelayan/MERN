@@ -13,10 +13,18 @@ const todoHandler = (todo) =>{
 setTodos([...todos,todo])
 }
 
+const deleteTask= task =>{
+  setTodos(todos.filter((todos=>todos!=task)))
+}
+const updateTask = task =>{
+  const tanas = todos.filter((todos=>todos == task))
+  tanas[0].completed =!tanas[0].completed
+  setTodos([...todos])
+}
   return (
     <div className="App">
       <Form todos={todoHandler}/>
-      <Display todos={todos}/>
+      <Display todos={todos} deleteTask={deleteTask} updateTask= {updateTask}/>
     </div>
   );
 }

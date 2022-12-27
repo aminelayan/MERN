@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 const Form = (props) => {
     const [todo,setTodo] = useState({})
+    
     const todoHandler =(e)=>{
     setTodo({text:e.target.value,
-            id:props.todos.length,
             completed:false
         })
     }
@@ -20,9 +20,6 @@ const Form = (props) => {
     <input type="text" onChange={todoHandler}/>
     <input type="submit" value="Add"/>
     </form>
-
-
-
     </div>
   )
 }
